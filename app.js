@@ -3,7 +3,11 @@ let numeroSecreto = 29;
 let chute = prompt('Faça a sua primeira tentativa, digite um número:');
 
 if (chute == numeroSecreto) {
-    console.log('Isso aí! Você acertou!')
+    console.log('Isso aí! Você acertou!');
 } else {
-    console.log('Não foi dessa vez, aperte F5 e tente novamente!')
+    if (chute > numeroSecreto) {
+        alert(`O número secreto é menor que ${chute}, tente novamente apertando F5 no seu teclado.`);
+    } else {
+        alert(`O número é maior que ${chute}, tente novamente apertando F5 no seu teclado.`);
+    }
 }
