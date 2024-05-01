@@ -7,7 +7,7 @@ let tentativa = 1;
 while (chute != numeroSecreto) {
     chute = prompt(`Faça uma jogada, digite um número:`);
     if (chute == numeroSecreto) {
-        alert(`Isso aí! Você acertou com ${tentativa} tentativa(s).`);
+        break;
     } else {
         if (chute > numeroSecreto) {
             alert(`O número secreto é menor que ${chute}, tente novamente.`);
@@ -16,4 +16,9 @@ while (chute != numeroSecreto) {
         }
     }
     tentativa++;
+}
+if (tentativa > 1) {
+    alert(`Isso aí! Você acertou com ${tentativa} tentativas.`);
+} else {
+    alert(`Isso aí! Você acertou com ${tentativa} tentativa.`);
 }
